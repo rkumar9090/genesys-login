@@ -68,7 +68,7 @@ Notes: Spring bean validation will take care of validating api
 
 **Method:** GET
 
-**Content-type:**application/json
+**Content-type:** application/json
 
 **Mandatory:** ID
 
@@ -83,7 +83,7 @@ Notes: Spring bean validation will take care of validating api
 
 **Method:** PUT
 
-**Content-type:**application/json
+**Content-type:** application/json
 
 **Mandatory:**name,password,email,id
 
