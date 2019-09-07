@@ -13,7 +13,7 @@ import com.example.genesys.genesyslogin.dto.LoginDto;
 import com.example.genesys.genesyslogin.service.LoginService;
 
 /**
- * Login controller for login operation
+ * Login controller for login operation *
  * 
  * @author RAJESH
  *
@@ -30,6 +30,9 @@ public class LoginController {
 	 * system time
 	 * 
 	 * @param loginDto
+	 * @method: POST
+	 * @mandatory: username,password
+	 * @body { "username": "Rfdffdsf", "password": "Durairaj90j" }
 	 * @return Success
 	 * @exception HttpStatus.UNAUTHORIZED
 	 */
