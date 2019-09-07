@@ -1,6 +1,6 @@
 # genesys-login
 
-## To validate a user with login operation and to perform crud operation on user entity.
+#### To validate a user with login operation and to perform crud operation on user entity.
  
 
 ## Technical Stack:
@@ -49,11 +49,8 @@ Notes: Spring bean validation will take care of validating api
 
 > {
   "name": "Rajesh",
-
   "email": "rkumar9090@hotmail.com",
-
   "password": "Durairaj90"
-
 }
 
 ## Response: User added successfully
