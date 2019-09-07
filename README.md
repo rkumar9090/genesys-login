@@ -1,9 +1,6 @@
-# Application Name: genesys-login
+# genesys-login
 
-## Objective: To validate a user with login operation and to perform crud operation on user entity.
-
- 
-
+## To validate a user with login operation and to perform crud operation on user entity.
  
 
 ## Technical Stack:
@@ -39,11 +36,18 @@ Run java -jar genesys-login-0.0.1-SNAPSHOT.jar
 Notes: Spring bean validation will take care of validating api
 
 ## Add User
-Endpoint: http://localhost:8080/api/user
-Method: POST
-Content-type:application/json
-Mandatory:name,password,email
-Body: {
+
+**Endpoint:** http://localhost:8080/api/user
+
+**Method:** POST
+
+**Content-type:** application/json
+
+**Mandatory:** name,password,email
+
+**Body:** 
+
+> {
   "name": "Rajesh",
 
   "email": "rkumar9090@hotmail.com",
@@ -83,11 +87,17 @@ Body: {"id",3,
 ## Response: User update successfully
 ## Exception 1: User not exists
 ## Login
+
 Endpoint: http://localhost:8080/api/login
+
 Method: POST
+
 Content-type:application/json
+
 Mandatory: username,password
-Body:{
+
+Body:
+{
 "username": "Rfdffdsf",
 
  "password": "Durairaj90j"
