@@ -85,7 +85,7 @@ Notes: Spring bean validation will take care of validating api
 
 **Content-type:** application/json
 
-**Mandatory:**name,password,email,id
+**Mandatory:** name,password,email,id
 
 **Body:**
 > {"id",3,
