@@ -8,16 +8,16 @@ public class UserDto {
 
 	private int id;
 
-	@Size(min = 3, max = 20, message = "name minimum should contain 3 char or maximum 20 chars")
+	@Size(min = 3, max = 60, message = "name minimum should contain 3 char or maximum 20 chars")
 	@NotNull(message = "name cannot be empty")
 	private String name;
 
-	@Size(min = 3, max = 50, message = "password minimum should contain 3 char or maximum 20 chars")
+	@Size(min = 3, max = 60, message = "password minimum should contain 3 char or maximum 20 chars")
 	@NotNull(message = "password cannot be empty")
 	private String password;
 
 	@Pattern(regexp = ".+@.+\\.[a-z]+")
-	@Size(min = 3, max = 20, message = "email minimum should contain 3 char or maximum 20 chars")
+	@Size(min = 3, max = 60, message = "email minimum should contain 3 char or maximum 20 chars")
 	@NotNull(message = "email cannot be empty")
 	private String email;
 

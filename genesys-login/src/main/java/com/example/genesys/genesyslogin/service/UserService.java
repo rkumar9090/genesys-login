@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -38,9 +39,10 @@ public class UserService {
 	public void addUser(UserDto userDto) {
 		User userExists = userDao.findByUserName(userDto.getName());
 		if (null == userExists) {
+			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 			User user = new User();
 			user.setUserName(userDto.getName());
-			user.setPassword(userDto.getPassword());
+			user.setPassword(encoder.encode(userDto.getPassword()));
 			user.setEmail(userDto.getEmail());
 			userDao.save(user);
 		} else {
@@ -48,8 +50,8 @@ public class UserService {
 		}
 	}
 
-	public void update( UserDto userDto) {
-		if(userDto.getId()>0) {
+	public void update(UserDto userDto) {
+		if (userDto.getId() > 0) {
 			Optional<User> userValue = userDao.findById(userDto.getId());
 			if (userValue.isPresent()) {
 				User user = userValue.get();
@@ -60,8 +62,7 @@ public class UserService {
 			} else {
 				throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not exists");
 			}
-		}
-		else {
+		} else {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Id is not valid");
 		}
 

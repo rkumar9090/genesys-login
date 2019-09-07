@@ -1,10 +1,11 @@
-package com.example.genesys.genesyslogin;
+package com.example.genesys;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**	
+/**
  * Spring boot appliction for genesys
+ * 
  * @author RAJESH
  *
  */
