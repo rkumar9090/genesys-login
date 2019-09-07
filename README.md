@@ -7,7 +7,7 @@
 
 **language:** Java 8
 
-**Framework:** Spring-boot,JPA
+**Framework:** Spring-boot,JPA,Spring Security
 
 **Database:** MySQL
 
@@ -100,11 +100,11 @@ Notes: Spring bean validation will take care of validating api
 
 ## Login
 
-**Endpoint:** http://localhost:8080/api/login
+**Endpoint:** http://localhost:8080/login
 
 **Method:** POST
 
-**Content-type:** application/json
+**Content-type:** Form Data
 
 **Mandatory:** username,password
 
@@ -114,8 +114,8 @@ Notes: Spring bean validation will take care of validating api
  "password": "Durairaj90j"
 }
 
-**Response:** SUCCESS
+**Response:** redirect to welcome page
 
-**Exception 1:** Invalid username and password
+**Exception 1:** Bad credentials
 
-**Exception 2:** Username is not valid
+**Exception 2:** Un Authorized
