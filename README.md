@@ -5,31 +5,25 @@
 
 ## Technical Stack:
 
-#### language: Java 8
+**language:** Java 8
 
-#### Framework: Spring-boot,JPA
+**Framework:** Spring-boot,JPA
 
-#### Database: MySQL
+**Database:** MySQL
 
-#### Build Tool: Maven
+**Build Tool:** Maven
 
 ## Build 
 
-Unzip the attached source code(genesys-login.zip)
-
-navigate to home directory 
-
-run mvn clean install
+- Unzip the attached source code(genesys-login.zip)
+- navigate to home directory 
+- run **mvn clean install**
 
 ## Run
 
-Execute genesys_ddl.sql file on local MySQL server 
-
-Navigate to target folder
-
-Run java -jar genesys-login-0.0.1-SNAPSHOT.jar
-
- 
+- Execute **genesys_ddl.sql** file on local MySQL server 
+- Navigate to target folder
+- run **java -jar genesys-login-0.0.1-SNAPSHOT.jar**
 
 ## API 
 
@@ -53,54 +47,75 @@ Notes: Spring bean validation will take care of validating api
   "password": "Durairaj90"
 }
 
-## Response: User added successfully
-## Exception 1: Username already exists
-Get User List
-Endpoint: http://localhost:8080/api/user
-Method: GET
-Content-type:application/json
-Response: [{"userId":5,"userName":"Rfdffdsf","password":"Durairaj90","email":"rk90@hotmail.com","lastlogin":"2019-08-27T18:30:00.000+0000"},{"userId":6,"userName":"Rf","password":"Durairaj90","email":"rkumar9090@hotmail","lastlogin":null}]
+**Response:** User added successfully
+
+**Exception 1:** Username already exists
+
+## Get User List
+
+**Endpoint:** http://localhost:8080/api/user
+
+**Method:** GET
+
+**Content-type:** application/json
+
+**Response:** 
+>[{"userId":5,"userName":"Rfdffdsf","password":"Durairaj90","email":"rk90@hotmail.com","lastlogin":"2019-08-27T18:30:00.000+0000"},{"userId":6,"userName":"Rf","password":"Durairaj90","email":"rkumar9090@hotmail","lastlogin":null}]
+
 ## Get User By ID
-Endpoint: http://localhost:8080/api/user/{id}
-Method: GET
-Content-type:application/json
-Mandatory:ID
-Response: {"userId":5,"userName":"Rfdffdsf","password":"Durairaj90","email":"rk90@hotmail.com","lastlogin":"2019-08-27T18:30:00.000+0000"}
-Exception 1: User not exists
+
+**Endpoint:** http://localhost:8080/api/user/{id}
+
+**Method:** GET
+
+**Content-type:**application/json
+
+**Mandatory:** ID
+
+**Response:**
+> {"userId":5,"userName":"Rfdffdsf","password":"Durairaj90","email":"rk90@hotmail.com","lastlogin":"2019-08-27T18:30:00.000+0000"}
+
+**Exception 1:** User not exists
+
 ## Update User
-Endpoint: http://localhost:8080/api/user
-Method: PUT
-Content-type:application/json
-Mandatory:name,password,email,id
-Body: {"id",3,
+
+**Endpoint:** http://localhost:8080/api/user
+
+**Method:** PUT
+
+**Content-type:**application/json
+
+**Mandatory:**name,password,email,id
+
+**Body:**
+> {"id",3,
   "name": "Rajesh",
-
   "email": "rkumar9090@hotmail.com",
-
   "password": "Durairaj90"
-
 }
 
-## Response: User update successfully
-## Exception 1: User not exists
+**Response:** User update successfully
+
+**Exception 1:** User not exists
+
 ## Login
 
-Endpoint: http://localhost:8080/api/login
+**Endpoint:** http://localhost:8080/api/login
 
-Method: POST
+**Method:** POST
 
-Content-type:application/json
+**Content-type:** application/json
 
-Mandatory: username,password
+**Mandatory:** username,password
 
-Body:
-{
+**Body:**
+> {
 "username": "Rfdffdsf",
-
  "password": "Durairaj90j"
-
 }
 
-## Response: SUCCESS
-## Exception 1: Invalid username and password
-## Exception 2: Username is not valid
+**Response:** SUCCESS
+
+**Exception 1:** Invalid username and password
+
+**Exception 2:** Username is not valid
